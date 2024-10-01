@@ -1,0 +1,25 @@
+.evaluate-container {
+    width: 100%;
+    margin: 50px auto;
+    border-radius: 8px;
+}
+
+.evaluate-text {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.evaluate-text-ds {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 22px;
+}
+hr {
+    width: 96.5%;
+    margin-top: 0;
+}

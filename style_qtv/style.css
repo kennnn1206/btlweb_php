@@ -1,0 +1,538 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0095FF;
+    color: white;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.menu {
+    padding-top: 112px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    padding: 25px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu ul li:hover {
+    background-color: #0056b3;
+}
+
+.menu ul li a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.menu ul li a i {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.main-content {
+    margin-left: 250px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-search{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-info{
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #0095FF;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.img-bar{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-bar img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.person{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info span {
+    font-size: 20px;
+}
+
+.overview {
+    margin-top: 20px;
+}
+
+.overview h1 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 5%;
+    justify-content: space-around;
+}
+
+.card-1 {
+    width: 10%;
+    background: linear-gradient(to bottom, #f15a5a, #3b73e1);
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.card-2 {
+    width: 10%;
+    background: linear-gradient(135deg, #ff774b, #ff0066);
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.card-3 {
+    width: 10%;
+    background: linear-gradient(135deg, #a4ff5e, #6f8e46);
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.card-1 .icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.card-1 .details span{
+    display: block;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold; 
+}
+
+.card-2 .icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.card-2 .details span {
+    display: block;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold; 
+}
+
+.card-3 .icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.card-3 .details span {
+    display: block;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold; 
+}
+
+.list {
+    margin-top: 40px;
+}
+
+.course-list-title{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list h1 {
+    font-size: 26px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+
+.edit-btn {
+    margin-top: 20px;
+    margin-right: 25px;
+    padding: 10px 20px;
+    background-color: #0095FF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.edit-btn:focus{
+    outline: none;
+}
+
+.edit-btn:hover{
+    background-color: #4fb4fc;
+}
+
+.btn-icon{
+    display: flex;
+    align-items: center;
+    gap: 10%;
+}
+
+.table-container {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;        
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #cdcdcd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #ddd;
+    color: #000;
+    font-weight: 700;
+}
+
+.table-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #cdcdcd;
+    border-radius: 4px;
+}
+
+.notification-container {
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    z-index: 1;
+}
+
+.notification-container h1 {
+    text-align: left;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.notification {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
+
+.icon.green {
+    background-color: #28a745;
+}
+
+.icon.red {
+    background-color: #dc3545;
+}
+
+.content {
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+.message {
+    font-size: 15px;
+    margin: 0;
+}
+
+.date {
+    font-size: 14px;
+    color: #777;
+    margin: 10px 0px;
+}
+
+.view-all {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: #0095FF;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+.img-bell{
+    border: none;
+    background-color: white;
+}
+.img-bell:focus-within+.notification-container{
+    display: block;
+} 
+
+
+.btn-mail{
+    border: none;
+    background-color: white;
+}
+
+.btn-mail:focus-within+.email-container{
+    display: block;
+} 
+
+.email-container {
+    background-color: #fff;
+    width: 270px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: absolute; 
+    top: 100%; 
+    right: 3.5%;
+    display: none;
+    z-index: 1;
+}
+
+.email-container h1 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.email-list {
+    margin-bottom: 20px;
+}
+
+.email-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.email-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+.email-details {
+    margin-left: 10px;
+}
+
+.email-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.email-meta {
+    font-size: 14px;
+    color: #888;
+}
+
+.view-all {
+    text-decoration: none;
+    color: #0095FF;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.view-all:hover {
+    text-decoration: underline;
+}
+
+.btn-info{
+    border: none;
+    background-color: white;
+}
+
+.btn-info:focus-within+.profile-card{
+    display: block;
+}
+
+.profile-card {
+    background-color: #fff;
+    width: 210px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: absolute; 
+    top: 100%; 
+    right: 0;
+    display: none;
+    z-index: 1;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.profile-info p {
+    margin: 5px 0 0;
+    color: #777;
+    font-size: 14px;
+    float: left;
+}
+
+.profile-menu {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 15px;
+}
+
+.menu-item {
+    padding: 10px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #000;
+    font-size: 16px;
+    
+}
+
+.menu-item i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.logout {
+    color: #000;
+}
+
+.menu-item:hover {
+    background-color: #f9f9f9;
+}
+
+.account {
+    color: #000;
+    text-decoration: none;
+}
