@@ -131,12 +131,12 @@
             <div class="overview">
                 <h1>Khóa học</h1>
                 <button class="new-course-btn">+ Khóa học mới</button>
-                <!-- <div class="new-course-container">
+                <div class="new-course-container">
                     <div class="formtk-container">
                         <div style="margin-bottom: 20px;">
-                            <i class="exit fa-solid fa-xmark"></i>
+                            <a href="qlkh.php" style="color: #000;"><i class="exit fa-solid fa-xmark"></i></a>
                         </div>
-                        <h2>Thêm khóa học</h2>
+                        <h1 class="add_course">Thêm khóa học</h1>
                         <form>
                             <label for="course-name">Tên khóa học</label>
                             <input type="text" id="course-name" name="course-name" placeholder="Nhập tên khóa học">
@@ -156,10 +156,10 @@
                             <label for="image">Hình ảnh</label>
                             <input type="file" id="image" name="image">
 
-                            <button type="submit">Thêm</button>
+                            <button class="btn-submit" type="submit">Thêm</button>
                         </form>
                     </div>
-                </div> -->
+                </div>
                 <hr>
                 <div class="course-list">
                     <div class="course-list-title">
