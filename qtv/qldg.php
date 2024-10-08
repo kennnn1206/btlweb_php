@@ -15,7 +15,7 @@
             <nav class="menu">
                 <ul>
                     <li style="border-top: 1px solid rgba(255, 255, 255, 0.1);"><a href="qtv.php"><i class="fas fa-chart-line"></i> Thống kê</a></li>
-                    <li><a href="#" style="display: flex; align-items: center; gap: 4%;"><i class="fas fa-edit"></i> Bài viết</a></li>
+                    <li><a href="qlbv.php" style="display: flex; align-items: center; gap: 4%;"><i class="fas fa-edit"></i> Bài viết</a></li>
                     <li><a href="qlsv.php" style="display: flex; align-items: center; gap: 6%;"><i class="fas fa-user-graduate"></i> Sinh viên</a></li>
                     <li><a href="qlsv.php"><i class="fas fa-chalkboard-teacher"></i> Giảng viên</a></li>
                     <li><a href="qlkh.php" style="display: flex; align-items: center; gap: 8%;"><i class="fas fa-book"></i> Khóa học</a></li>
@@ -36,7 +36,6 @@
                 </div>
                 <div class="img-info">
                     <div class="img-bar">
-                            <img class="mess" src="../img/mess.png" alt="Fast Learn Logo">
                             <button class="btn-mail" ><img class="mail" src="../img/mail.png" alt="Fast Learn Logo"></button>
                             <div class="email-container">
                                 <h1>Email</h1>
@@ -103,7 +102,7 @@
                             <span>Nguyễn Tuấn Anh</span>
                         </div>
                     </button>
-                    <div class="profile-card">
+                    <div class="profile-card" style="display: none;">
                         <div class="profile-header">
                             <img src="../img/avt.jpg" alt="User Image" class="profile-img">
                             <div class="profile-info">
@@ -112,9 +111,9 @@
                             </div>
                         </div>
                         <div class="profile-menu">
-                            <div class="menu-item">
+                            <div class="menu-item account-item">
                                 <i class="fa-solid fa-user"></i>
-                                <p>Tài khoản</p>
+                                <a href="tk.php" class="account">Tài khoản</a>
                             </div>
                             <div class="menu-item">
                                 <i class="fa-solid fa-gear"></i>
@@ -152,7 +151,6 @@
                                 <th>Đánh giá</th>
                                 <th>Tình trạng</th>
                                 <th>Ngày thực hiện</th>
-                                <th>Chi tiết</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -163,7 +161,6 @@
                                 <td>Quá tuyệt vời</td>
                                 <td>5 sao</td>
                                 <td>25/09/2024</td>
-                                <td>Giảng viên dạy rất hay, tài liệu và kiến thức rất đầy đủ</td>
                             </tr>
                         </tbody>
                     </table>
@@ -172,8 +169,23 @@
         </div>
        
         <script>
-        function getfocus() {
-            document.getElementById("notification-container").focus();
+            function getfocus() {
+                document.getElementById("notification-container").focus();
+            }
+
+            var dropdown = document.getElementsByClassName("btn-info");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+                dropdown[i].addEventListener("click", function() {
+                    this.classList.toggle("profile-menu");
+                    var dropdownContent = this.nextElementSibling;
+                    if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                    } else {
+                    dropdownContent.style.display = "block";
+                    }
+                });
             }
 
         </script>

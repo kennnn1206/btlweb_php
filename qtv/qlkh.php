@@ -15,7 +15,7 @@
             <nav class="menu">
                 <ul>
                     <li style="border-top: 1px solid rgba(255, 255, 255, 0.1);"><a href="qtv.php"><i class="fas fa-chart-line"></i> Thống kê</a></li>
-                    <li><a href="#" style="display: flex; align-items: center; gap: 4%;"><i class="fas fa-edit"></i> Bài viết</a></li>
+                    <li><a href="qlbv.php" style="display: flex; align-items: center; gap: 4%;"><i class="fas fa-edit"></i> Bài viết</a></li>
                     <li><a href="qlsv.php" style="display: flex; align-items: center; gap: 6%;"><i class="fas fa-user-graduate"></i> Sinh viên</a></li>
                     <li><a href="qlgv.php"><i class="fas fa-chalkboard-teacher"></i> Giảng viên</a></li>
                     <li><a href="qlkh.php" style="display: flex; align-items: center; gap: 8%;"><i class="fas fa-book"></i> Khóa học</a></li>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="img-info">
                     <div class="img-bar">
-                            <img src="../img/mess.png" alt="Fast Learn Logo">
+
                             <button class="btn-mail" ><img class="mail" src="../img/mail.png" alt="Fast Learn Logo"></button>
                             <div class="email-container">
                                 <h1>Email</h1>
@@ -103,7 +103,7 @@
                             <span>Nguyễn Tuấn Anh</span>
                         </div>
                     </button>
-                    <div class="profile-card">
+                    <div class="profile-card" style="display: none;">
                         <div class="profile-header">
                             <img src="../img/avt.jpg" alt="User Image" class="profile-img">
                             <div class="profile-info">
@@ -112,9 +112,9 @@
                             </div>
                         </div>
                         <div class="profile-menu">
-                            <div class="menu-item">
+                            <div class="menu-item account-item">
                                 <i class="fa-solid fa-user"></i>
-                                <p>Tài khoản</p>
+                                <a href="tk.php" class="account">Tài khoản</a>
                             </div>
                             <div class="menu-item">
                                 <i class="fa-solid fa-gear"></i>
@@ -130,14 +130,14 @@
             </header>
             <div class="overview">
                 <h1>Khóa học</h1>
-                <button class="new-course-btn">+ Khóa học mới</button>
-                <div class="new-course-container">
+                <button class="new-course-btn" id="newCourseBtn">+ Khóa học mới</button>
+                <div class="new-course-container" id="newCourseContainer" style="display: none;">
                     <div class="formtk-container">
                         <div style="margin-bottom: 20px;">
                             <a href="qlkh.php" style="color: #000;"><i class="exit fa-solid fa-xmark"></i></a>
                         </div>
                         <h1 class="add_course">Thêm khóa học</h1>
-                        <form>
+                        <form class="form-text">
                             <label for="course-name">Tên khóa học</label>
                             <input type="text" id="course-name" name="course-name" placeholder="Nhập tên khóa học">
 
@@ -199,8 +199,8 @@
                                     <td>Hướng dẫn bạn tạo giao diện trang web đẹp</td>
                                     <td>CNTT</td>
                                     <td>Trần Thị Thu Phương</td>
-                                    <td>100</td>
                                     <td>950.000 vnd</td>
+                                    <td>100</td>
                                     <td>5</td>
                                 </tr>
                                 
@@ -212,6 +212,33 @@
         <script>
             function toggleSwitch(element) {
                 element.classList.toggle('active');
+            }
+
+            const newCourseBtn = document.getElementById('newCourseBtn');
+            const newCourseContainer = document.getElementById('newCourseContainer');
+            // Thêm sự kiện click vào nút "Khóa học mới"
+            newCourseBtn.addEventListener('click', function() {
+                // Kiểm tra nếu form đang ẩn (display: none), thì hiển thị (display: block)
+                if (newCourseContainer.style.display === 'none') {
+                    newCourseContainer.style.display = 'inline-block';
+                } else {
+                    newCourseContainer.style.display = 'none';
+                }
+            });
+
+            var dropdown = document.getElementsByClassName("btn-info");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+                dropdown[i].addEventListener("click", function() {
+                    this.classList.toggle("profile-menu");
+                    var dropdownContent = this.nextElementSibling;
+                    if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                    } else {
+                    dropdownContent.style.display = "block";
+                    }
+                });
             }
         </script>
 </body>

@@ -73,7 +73,7 @@ body {
 }
 
 .img-info{
-    width: 400px;
+    width: 330px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -102,7 +102,7 @@ body {
 }
 
 .img-bar{
-    width: 150px;
+    width: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -460,10 +460,6 @@ table th {
     background-color: white;
 }
 
-.btn-info:focus-within+.profile-card{
-    display: block;
-}
-
 .profile-card {
     background-color: #fff;
     width: 210px;
@@ -471,10 +467,10 @@ table th {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
+    display: none;
     position: absolute; 
     top: 100%; 
     right: 0;
-    display: none;
     z-index: 1;
 }
 
@@ -501,11 +497,6 @@ table th {
     color: #777;
     font-size: 14px;
     float: left;
-}
-
-.profile-menu {
-    border-top: 1px solid #e0e0e0;
-    padding-top: 15px;
 }
 
 .menu-item {

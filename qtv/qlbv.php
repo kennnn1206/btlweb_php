@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="../style_qtv/style.css"> 
-    <link rel="stylesheet" href="../style_qtv/reset.css">
-    <link rel="stylesheet" href="../style_qtv/style-qlsv.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://kit.fontawesome.com/533aad8d01.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="../style_qtv/reset.css"> 
+    <link rel="stylesheet" href="../style_qtv/styles-article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+    <script src="https://kit.fontawesome.com/533aad8d01.js" crossorigin="anonymous"></script>
 </head>
 <body>
         <div class="sidebar">
@@ -17,7 +17,7 @@
                     <li style="border-top: 1px solid rgba(255, 255, 255, 0.1);"><a href="qtv.php"><i class="fas fa-chart-line"></i> Thống kê</a></li>
                     <li><a href="qlbv.php" style="display: flex; align-items: center; gap: 4%;"><i class="fas fa-edit"></i> Bài viết</a></li>
                     <li><a href="qlsv.php" style="display: flex; align-items: center; gap: 6%;"><i class="fas fa-user-graduate"></i> Sinh viên</a></li>
-                    <li><a href="qlgv.php"><i class="fas fa-chalkboard-teacher"></i> Giảng viên</a></li>
+                    <li><a href="qlsv.php"><i class="fas fa-chalkboard-teacher"></i> Giảng viên</a></li>
                     <li><a href="qlkh.php" style="display: flex; align-items: center; gap: 8%;"><i class="fas fa-book"></i> Khóa học</a></li>
                     <li><a href="qldg.php" style="display: flex; align-items: center; gap: 6%;"><i class="fas fa-star"></i> Đánh giá</a></li>
                 </ul>
@@ -30,7 +30,7 @@
                         <img src="../img/logo.png" alt="Fast Learn Logo"> 
                     </div>
                     <div class="search-bar">
-                        <input style=" width: 300px; padding: 10px; border: 1px solid #ddd; border-radius: 5px 0 0 5px; outline: none; " type="text" placeholder="Tìm kiếm...">
+                        <input type="text" placeholder="Tìm kiếm...">
                         <button><i class="fas fa-search"></i></button>
                     </div>
                 </div>
@@ -128,129 +128,85 @@
                 </div>
             </header>
             <div class="overview">
-                <div class="over-container">
-                    <div class="form-container">
-                        <h1>Thông tin giảng viên</h1>
-                        <form>
-                            <div class="form-group">
-                                <label for="name">Họ và Tên:</label>
-                                <input type="text" id="name" name="name">
-                            </div>
-                
-                            <div class="form-group">
-                                <label for="email">Địa chỉ Email:</label>
-                                <input type="email" id="email" name="email">
-                            </div>
-                
-                            <div class="form-group">
-                                <label for="phone">Số điện thoại:</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-                
-                            <div class="form-group">
-                                <label for="address">Quê quán:</label>
-                                <input type="text" id="address" name="address">
-                            </div>
-                
-                            <div class="form-group">
-                                <label>Giới tính:</label>
-                                <div class="gender">
-                                    <input type="radio" id="male" name="gender" value="Nam">
-                                    <label for="male">Nam</label>
-                                    <input type="radio" id="female" name="gender" value="Nữ">
-                                    <label for="female">Nữ</label>
+                <div class="article-management-container">
+                    <div class="article-title">Bài viết</div>
+                    <div class="article-search-bar">
+                        <button class="new-article-btn" id="newPost">Bài viết mới</button>
+                        <div class="new-article-form-container" id="newArticleContainer" style="display: none;">
+                            <div class="article-form-wrapper">
+                                <div class="exit-btn">
+                                    <a href="qlbv.php"><i class="fa-solid fa-xmark"></i></a>
                                 </div>
+                                <h1>Thêm bài đăng mới</h1>
+                                <form action="#" method="post" enctype="multipart/form-data">
+                                    <div class="article-form-group">
+                                        <label for="post-content">Nội dung bài đăng</label>
+                                        <textarea id="post-content" name="content" rows="4" placeholder="Nhập câu trả lời"></textarea>
+                                    </div>
+                        
+                                    <div class="article-form-group">
+                                        <label for="post-image">Tải hình ảnh (nếu có)</label>
+                                        <input type="file" id="post-image" name="image">
+                                    </div>
+                        
+                                    <div class="article-form-actions">
+                                        <button type="submit" class="btn-submit">Đăng</button>
+                                        <button type="button" class="btn-cancel">Hủy</button>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="btn-new">
-                                <button type="submit" class="submit-btn">Thêm mới</button>
-                                <i class="fa-solid fa-arrows-rotate"></i>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="form-wrapper">
-                        <input type="text" class="input-field" placeholder="Tìm kiếm theo tên, email & số điện thoại">
-                
-                        <select class="dropdown">
-                            <option value="">Lọc theo giới tính</option>
-                            <option value="nam">Nam</option>
-                            <option value="nu">Nữ</option>
-                        </select>
-                
-                        <div class="btn-group">
-                            <button class="btn">Tìm kiếm<i class="fas fa-search"></i></button>
-                            <button class="btn">Tải xuống<i class="fa-solid fa-download"></i></button>
                         </div>
-                
-                        <div class="toggle-section">
-                            <label>Gửi thông báo sau khi thêm mới
-                                <div class="toggle" onclick="toggleSwitch(this)"></div>
-                            </label>
-                            <label>Gửi thông báo sau khi cập nhật
-                                <div class="toggle" onclick="toggleSwitch(this)"></div>
-                            </label>
-                            <label>Gửi thông báo sau khi xóa bỏ
-                                <div class="toggle" onclick="toggleSwitch(this)"></div>
-                            </label>
-                            <label>Chạy đoạn giới thiệu mở đầu
-                                <div class="toggle" onclick="toggleSwitch(this)"></div>
-                            </label>
+                        <div>
+                            <input type="text" placeholder="Tìm bài viết">
+                            <button class="search-button">Tìm bài viết</button>
                         </div>
                     </div>
-                
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nội dung</th>
+                                <th>Tác giả</th>
+                                <th>Thời gian</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Chào tất cả mọi người!</td>
+                                <td>admin</td>
+                                <td>Đã xuất bản <br> 06/09/2024 lúc 15:30</td>
+                                <td>
+                                    <button class="edit"><i class="fa-solid fa-pen-to-square"></i>Sửa</button>
+                                    <button class="delete"><i class="fa-solid fa-delete-left"></i>Xóa</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="course-list">
-                    <div class="course-list-title">
-                        <h1>Danh sách giảng viên</h1>
-                        <div>   
-                            <button class="edit-btn">
-                                <div class="btn-icon">
-                                    <i class="fa-regular fa-pen-to-square"></i>Sửa
-                                </div>
-                            </button>
-                            <button class="edit-btn">
-                                <div class="btn-icon">
-                                    <i class="fa-solid fa-delete-left"></i>Xóa
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="table-container">
-                        <table >
-                            <thead>
-                                <tr>
-                                    <th>STT</th>
-                                    <th>Họ và tên</th>
-                                    <th>Email</th>
-                                    <th>Số điện thoại</th>
-                                    <th>Quê quán</th>
-                                    <th>Giới tính</th>
-                                    <th>Tài khoản</th>
-                                    <th>Mật khẩu</th>
-                                    <th>Tiêu chí</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Trần Thị Thu Phương</td>
-                                    <td>phuongCNTT@gmail.com</td>
-                                    <td>0382752959</td>
-                                    <td>Hà Nội</td>
-                                    <td>Nữ</td>
-                                    <td>giangvien_123</td>
-                                    <td>phuong@123456</td>
-                                    <td>5</td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+            </div>
+                
         </div>
+       
         <script>
-            function toggleSwitch(element) {
-                element.classList.toggle('active');
+            function getfocus() {
+                document.getElementById("notification-container").focus();
             }
+
+            document.querySelector('.account-item').addEventListener('click', function() {
+                window.location.href = 'tk.php';
+            });
+
+            const newCourseBtn = document.getElementById('newPost');
+            const newCourseContainer = document.getElementById('newArticleContainer');
+            // Thêm sự kiện click vào nút "Bài viết mới"
+            newCourseBtn.addEventListener('click', function() {
+                // Kiểm tra nếu form đang ẩn (display: none), thì hiển thị (display: block)
+                if (newCourseContainer.style.display === 'none') {
+                    newCourseContainer.style.display = 'inline-block';
+                } else {
+                    newCourseContainer.style.display = 'none';
+                }
+            });
 
             var dropdown = document.getElementsByClassName("btn-info");
             var i;

@@ -3,15 +3,6 @@ body {
     justify-content: space-around;
 }
 
-.left{
-    width:40%;
-    height: 40%;
-    background-color: blueviolet;
-}
-.right{
-    width:40%;
-    background-color: rgb(126, 126, 126);
-}
 .over-container{
     display: flex;
     justify-content: space-around;
@@ -77,7 +68,7 @@ input[type="tel"] {
 
 .form-wrapper {
     width: 500px;
-    background-color: #C0C0C0;
+    background-color: #0095FF;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
